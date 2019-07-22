@@ -1,0 +1,7 @@
+Python 3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 21:26:53) [MSC v.1916 32 bit (Intel)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> from selenium import webdriver
+>>> driver = webdriver.Firefox()
+>>> driver.get("http://www.baidu.com")
+>>> driver.get("https://blog.csdn.net/a781751136/article/details/80231406")
+>>> 
