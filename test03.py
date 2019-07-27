@@ -49,42 +49,51 @@ sunmit()  提交表单
 
 """
 
+
+
+""""""
 # # tag name  通过标签去定位（div）
 # # find_element_by_link_text
 #
 # from selenium import webdriver
+# import selenium.webdriver.support.ui as ui
 # from time import sleep
 #
 # driver = webdriver.Firefox()
 #
 # #跳转网页
+# driver_item = webdriver.Firefox()
+# wait = ui.WebDriverWait(driver_item,10)
 # driver.get("https://xdclass.net")
-#
+# wait.until(lambda driver: driver.find_element_by_partial_link_text("视频学习").click())
 # print(driver.title)
-#
+
 # # 睡眠时间3s
 # sleep(3)
 #
+# wait = ui.webdriverwait(driver_item,10)
 # driver.find_element_by_partial_link_text("视频学习").click()
 
+""""""
 
-from selenium import webdriver
-from time import sleep
 
-driver = webdriver.Firefox()
-driver.get("https://www.xdclass.net")
-print(driver.title)
-sleep(3)
-# driver.find_element_by_partial_link_text("视频学习").click()
-# driver.find_element_by_css_selector(".hotcourse > div:nth-child(2) > a:nth-child(1) > div:nth-child(1) > img:nth-child(2)")
-
-# 路径：通过firebug的拷贝css路径
-# 审查元素--右键--复制--css选择器
-
-# Xpath语法：
-# 注意： // 全部的意思，即全文扫描   /相邻的意思   *是所有元素   ..是元素的父节点   .是当前节点
-driver.find_element_by_xpath("/html/body/div/div/div[1]/div/div[2]/ul/li[2]").click()
-print(driver.title)
+# from selenium import webdriver
+# from time import sleep
+#
+# driver = webdriver.Firefox()
+# driver.get("https://www.xdclass.net")
+# print(driver.title)
+# sleep(3)
+# # driver.find_element_by_partial_link_text("视频学习").click()
+# # driver.find_element_by_css_selector(".hotcourse > div:nth-child(2) > a:nth-child(1) > div:nth-child(1) > img:nth-child(2)")
+#
+# # 路径：通过firebug的拷贝css路径
+# # 审查元素--右键--复制--css选择器
+#
+# # Xpath语法：
+# # 注意： // 全部的意思，即全文扫描   /相邻的意思   *是所有元素   ..是元素的父节点   .是当前节点
+# driver.find_element_by_xpath("/html/body/div/div/div[1]/div/div[2]/ul/li[2]").click()
+# print(driver.title)
 
 
 # 8种选择器注意问题：如果定位元素报错，原因如下
