@@ -74,13 +74,13 @@
 # # 去掉保存密码checkbox勾选
 # login_box_ele = driver.find_element_by_css_selector(".login_btn > span:nth-child(1) > input:nth-child(1)")
 # ActionChains(driver).click(login_box_ele).perform()
-
+#
 # # 查找输入框，输入账号密码，输入框需要提前清理
 # driver.find_element_by_css_selector(".mobienum > input:nth-child(1)").clear()
 # driver.find_element_by_css_selector(".mobienum > input:nth-child(1)").send_keys("13636026394")
 #
 # driver.find_element_by_css_selector(".psw > input:nth-child(1)").clear()
-# driver.find_element_by_css_selector(".psw > input:nth-child(1)").send_keys("zql12345+")
+# driver.find_element_by_css_selector(".psw > input:nth-child(1)").send_keys("***12345*")
 #
 # # 查找登陆按钮
 # login_btn_ele = driver.find_element_by_css_selector(".btn")
@@ -108,8 +108,8 @@
 #     print("登陆成功！")
 # else:
 #     print("登陆失败！")
-
-# driver.quit()
+#
+# # driver.quit()
 
 
 
@@ -143,36 +143,36 @@
 #
 # 结论：隐性等待和显性等待可以同时使用，等待最长时间取两者之中的较大者
 
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from time import sleep
-
-# 拿到driver
-driver = webdriver.Firefox()
-# driver.implicitly_wait(10)  # 隐性等待
-
-# 跳转网页
-driver.get("https://baidu.com")
-
-try:
-    # 显性等待
-    ele = WebDriverWait(driver,5,0.5).until(EC.presence_of_element_located((By.ID,"kw")))
-    # driver.implicitly_wait(4)
-    ele.send_keys("林俊杰")
-    sleep(3)
-    print("资源加载成功.")
-
-    print(driver.title)
-
-except:
-    print("资源加载失败,发送报警邮件或者短信.")
-
-finally:
-    print("不管有没有成功，都打印，用于资源管理.")
-# 退出浏览器
-driver.quit()
+# from selenium import webdriver
+# from selenium.webdriver.common.by import By
+# from selenium.webdriver.support.ui import WebDriverWait
+# from selenium.webdriver.support import expected_conditions as EC
+# from time import sleep
+#
+# # 拿到driver
+# driver = webdriver.Firefox()
+# # driver.implicitly_wait(10)  # 隐性等待
+#
+# # 跳转网页
+# driver.get("https://baidu.com")
+#
+# try:
+#     # 显性等待
+#     ele = WebDriverWait(driver,5,0.5).until(EC.presence_of_element_located((By.ID,"kw")))
+#     # driver.implicitly_wait(4)
+#     ele.send_keys("林俊杰")
+#     sleep(3)
+#     print("资源加载成功.")
+#
+#     print(driver.title)
+#
+# except:
+#     print("资源加载失败,发送报警邮件或者短信.")
+#
+# finally:
+#     print("不管有没有成功，都打印，用于资源管理.")
+# # 退出浏览器
+# driver.quit()
 
 
 
